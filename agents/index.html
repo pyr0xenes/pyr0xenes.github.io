@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive — Seth Jahnsen</title>
+    <title>Agents — Seth Jahnsen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -60,6 +60,11 @@
             text-decoration: none;
         }
 
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
         header nav a {
             font-family: 'DM Sans', sans-serif;
             font-size: 14px;
@@ -79,45 +84,46 @@
             color: var(--text-primary);
         }
 
-        .year-group {
-            margin-bottom: 36px;
+        .agent-card {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
         }
 
-        .year-group h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: 0.06em;
-            margin-bottom: 12px;
+        .agent-card:last-child {
+            border-bottom: none;
         }
 
-        .archive-item {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 16px;
+        .agent-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
         }
 
-        .archive-item a {
+        .agent-card h3 a {
             color: var(--text-primary);
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s, color 0.2s;
         }
 
-        .archive-item a:hover {
+        .agent-card h3 a:hover {
             color: var(--link-color);
             border-bottom-color: var(--link-color);
         }
 
-        .archive-item .date {
+        .agent-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .agent-card .tag {
             font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
-            white-space: nowrap;
-            flex-shrink: 0;
+            letter-spacing: 0.04em;
+            margin-top: 8px;
         }
 
         footer {
@@ -156,32 +162,18 @@
     <div class="container">
         <header>
             <h1><a href="../">Seth Jahnsen</a></h1>
-            <nav style="display: flex; gap: 20px;">
+            <nav>
                 <a href="/archive">Archive</a>
                 <a href="/agents">Agents</a>
             </nav>
         </header>
 
-        <h2 class="page-title">Archive</h2>
+        <h2 class="page-title">Agents</h2>
 
-        <div class="year-group">
-            <h3>2026</h3>
-            <div class="archive-item">
-                <a href="#">Title of Your First Post or Essay</a>
-                <span class="date">Jan 2026</span>
-            </div>
-        </div>
-
-        <div class="year-group">
-            <h3>2025</h3>
-            <div class="archive-item">
-                <a href="#">Title of an Older Post</a>
-                <span class="date">Nov 2025</span>
-            </div>
-            <div class="archive-item">
-                <a href="#">Another Older Post</a>
-                <span class="date">Aug 2025</span>
-            </div>
+        <div class="agent-card">
+            <h3><a href="#">Example Agent</a></h3>
+            <p>A brief description of what this agent does and the problem it solves.</p>
+            <div class="tag">Python / OpenAI API</div>
         </div>
 
         <footer>
